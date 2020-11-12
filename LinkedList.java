@@ -1,6 +1,27 @@
 public class LinkedList {
 
-    
+    Node head;
+
+    void add(int data) {
+        Node toAdd = new Node(data);
+
+        if (isEmpty()) {
+            head = toAdd;
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        temp.next = toAdd;
+
+    }
+
+    boolean isEmpty() {
+        return head == null;
+    }
 
     static class Node {
         int data;
