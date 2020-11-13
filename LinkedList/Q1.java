@@ -1,3 +1,5 @@
+package LinkedList;
+
 // Java program for reversing the Linked lsit
 
 class LinkedList{
