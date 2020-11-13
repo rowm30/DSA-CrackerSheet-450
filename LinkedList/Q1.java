@@ -52,4 +52,7 @@ class LinkedList{
         System.out.println("Reversed linked list");
         list.printList(head);
     }
+
+	public void push(int data) {
+	}
 }
