@@ -20,9 +20,17 @@ public class Q1 {
         queue.add(startNode);
         while(!queue.isEmpty()){
             TreeNode tempNode = queue.poll();
-            
+            System.out.println(tempNode.data);
+            if (tempNode.left != null) {
+                queue.add(tempNode.left);
+            }
+            if (tempNode.right != null) {
+                queue.add(tempNode.right);
+            }
         }
     }
+
+    
 
 
 }
