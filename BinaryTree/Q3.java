@@ -1,60 +1,52 @@
-import java.util.*;
-import java.io.*;
+// Java program to find height of tree
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
+class Q3{
+    NodeXL root;
+
+    int maxDepth(NodeXL node){
+        if (node == null) {
+            return 0;
+        } else {
+            // Compute the depth of each sub tree
+            int lDepth = maxDepth(node.left);
+            int rDepth = maxDepth(node.right);
+
+            // Use the larger one 
+            if (lDepth>rDepth) {
+                return(lDepth+1);
+            } else {
+                return(rDepth+1);
+            }
+        }
+    }
+
+    public static void main(String[] args){
+        Q3 tree = new Q3();
+
+        tree.root = new NodeXL(1);
+        tree.root.left = new NodeXL(2);
+        tree.root.right = new NodeXL(3);
+        tree.root.left.left = new NodeXL(4);
+        tree.root.left.right = new NodeXL(5);
+        tree.root.left.right.left = new NodeXL(5);
+        tree.root.left.right.right = new NodeXL(5);
+        tree.root.left.left.right = new NodeXL(5);
+        tree.root.left.left.right = new NodeXL(5);
+        tree.root.right.left = new NodeXL(5);
+        tree.root.right.right = new NodeXL(5);
+        tree.root.right.right.left = new NodeXL(5);
+        tree.root.right.right.left.right = new NodeXL(5);
+        
+        System.out.println("Height is : " + tree.maxDepth(tree.root));
     }
 }
 
-class Solution {
+class NodeXL{
+    int data;
+    NodeXL left,right;
 
-	/*
-    class Node 
-    	int data;
-    	Node left;
-    	Node right;
-	*/
-	public static int height(Node root) {
-      	if(root == null){
-              return -1;
-          }else{
-              return 1 + Math.max(height(root.left),height(root.right));
-          }
+    NodeXL(int item){
+        data = item;
+        left = right = null;
     }
-
-	public static Node insert(Node root, int data) {
-        if(root == null) {
-            return new Node(data);
-        } else {
-            Node cur;
-            if(data <= root.data) {
-                cur = insert(root.left, data);
-                root.left = cur;
-            } else {
-                cur = insert(root.right, data);
-                root.right = cur;
-            }
-            return root;
-        }
-    }
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int t = scan.nextInt();
-        Node root = null;
-        while(t-- > 0) {
-            int data = scan.nextInt();
-            root = insert(root, data);
-        }
-        scan.close();
-        int height = height(root);
-        System.out.println(height);
-    }	
 }
