@@ -1,8 +1,9 @@
 package org.arpit.java2blog.binarytree;
  
-import java.util.Queue;
 import java.util.LinkedList;
-public class BinaryTreeLevelOrder {
+import java.util.Queue;
+import java.util.Stack;
+public class BinaryTreeReverseLevelOrder {
  
  
 	public static class TreeNode
@@ -16,26 +17,32 @@ public class BinaryTreeLevelOrder {
 		}
 	}
  
-	// prints in level order
-	public static void levelOrderTraversal(TreeNode startNode) {
-		Queue<TreeNode> queue=new LinkedList<TreeNode>();
+	// prints in reverse level order
+	public static void reverseLevelOrderTraversal(TreeNode startNode) {
+		Queue<TreeNode> queue=new LinkedList<>();
+		Stack<TreeNode> stack=new Stack<>();
 		queue.add(startNode);
 		while(!queue.isEmpty())
 		{
 			TreeNode tempNode=queue.poll();
-			System.out.printf("%d ",tempNode.data);
-			if(tempNode.left!=null)
-				queue.add(tempNode.left);
 			if(tempNode.right!=null)
 				queue.add(tempNode.right);
+			if(tempNode.left!=null)
+				queue.add(tempNode.left);
+ 
+			stack.push(tempNode);
 		}
+ 
+		while(!stack.empty())
+			System.out.print(stack.pop().data+" " );
 	}
 	public static void main(String[] args)
 	{
+		BinaryTreeReverseLevelOrder bi=new BinaryTreeReverseLevelOrder();
 		// Creating a binary tree
 		TreeNode rootNode=createBinaryTree();
-		System.out.println("Level Order traversal of binary tree will be:");
-		levelOrderTraversal(rootNode);
+		System.out.println("Reverse Level Order traversal of binary tree will be:");
+		reverseLevelOrderTraversal(rootNode);
 	}
  
 	public static TreeNode createBinaryTree()
