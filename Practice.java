@@ -1,70 +1,82 @@
-package org.arpit.java2blog.binarytree;
- 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-public class BinaryTreeReverseLevelOrder {
- 
- 
-	public static class TreeNode
-	{
-		int data;
-		TreeNode left;
-		TreeNode right;
-		TreeNode(int data)
-		{
-			this.data=data;
-		}
-	}
- 
-	// prints in reverse level order
-	public static void reverseLevelOrderTraversal(TreeNode startNode) {
-		Queue<TreeNode> queue=new LinkedList<>();
-		Stack<TreeNode> stack=new Stack<>();
-		queue.add(startNode);
-		while(!queue.isEmpty())
-		{
-			TreeNode tempNode=queue.poll();
-			if(tempNode.right!=null)
-				queue.add(tempNode.right);
-			if(tempNode.left!=null)
-				queue.add(tempNode.left);
- 
-			stack.push(tempNode);
-		}
- 
-		while(!stack.empty())
-			System.out.print(stack.pop().data+" " );
-	}
-	public static void main(String[] args)
-	{
-		BinaryTreeReverseLevelOrder bi=new BinaryTreeReverseLevelOrder();
-		// Creating a binary tree
-		TreeNode rootNode=createBinaryTree();
-		System.out.println("Reverse Level Order traversal of binary tree will be:");
-		reverseLevelOrderTraversal(rootNode);
-	}
- 
-	public static TreeNode createBinaryTree()
-	{
- 
-		TreeNode rootNode =new TreeNode(40);
-		TreeNode node20=new TreeNode(20);
-		TreeNode node10=new TreeNode(10);
-		TreeNode node30=new TreeNode(30);
-		TreeNode node60=new TreeNode(60);
-		TreeNode node50=new TreeNode(50);
-		TreeNode node70=new TreeNode(70);
- 
-		rootNode.left=node20;
-		rootNode.right=node60;
- 
-		node20.left=node10;
-		node20.right=node30;
- 
-		node60.left=node50;
-		node60.right=node70;
- 
-		return rootNode;
-	}
+// Recursive optimized Java program to find the diameter of 
+// a Binary Tree 
+
+// Class containing left and right child of current 
+// node and key value 
+class Node { 
+	int data; 
+	Node left, right; 
+
+	public Node(int item) 
+	{ 
+		data = item; 
+		left = right = null; 
+	} 
+} 
+
+// Class to print the Diameter 
+class BinaryTree { 
+	Node root; 
+
+	// Method to calculate the diameter and return it to 
+	// main 
+	int diameter(Node root) 
+	{ 
+		// base case if tree is empty 
+		if (root == null) 
+			return 0; 
+
+		// get the height of left and right sub trees 
+		int lheight = height(root.left); 
+		int rheight = height(root.right); 
+
+		// get the diameter of left and right subtrees 
+		int ldiameter = diameter(root.left); 
+		int rdiameter = diameter(root.right); 
+
+		/* Return max of following three 
+		1) Diameter of left subtree 
+		2) Diameter of right subtree 
+		3) Height of left subtree + height of right subtree 
+		+ 1 
+		*/
+		return Math.max(lheight + rheight + 1, 
+						Math.max(ldiameter, rdiameter)); 
+	} 
+
+	// A wrapper over diameter(Node root) 
+	int diameter() { return diameter(root); } 
+
+	// The function Compute the "height" of a tree. Height 
+	// is the number f nodes along the longest path from the 
+	// root node down to the farthest leaf node. 
+	static int height(Node node) 
+	{ 
+		// base case tree is empty 
+		if (node == null) 
+			return 0; 
+
+		// If tree is not empty then height = 1 + max of 
+		// left height and right heights 
+		return (1
+				+ Math.max(height(node.left), 
+						height(node.right))); 
+	} 
+
+	// Driver Code 
+	public static void main(String args[]) 
+	{ 
+		// creating a binary tree and entering the nodes 
+		BinaryTree tree = new BinaryTree(); 
+		tree.root = new Node(1); 
+		tree.root.left = new Node(2); 
+		tree.root.right = new Node(3); 
+		tree.root.left.left = new Node(4); 
+		tree.root.left.right = new Node(5); 
+
+		// Function Call 
+		System.out.println( 
+			"The diameter of given binary tree is : "
+			+ tree.diameter()); 
+	} 
 }
