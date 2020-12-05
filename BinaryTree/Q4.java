@@ -1,8 +1,6 @@
 package BinaryTree;
 
-import org.graalvm.compiler.nodes.extended.LoadHubNode;
-
-class Q4{
+class Q4 {
     Node root;
     
     int diameter(Node root){
@@ -19,7 +17,20 @@ class Q4{
         return Math.max(lheight + rheight + 1, Math.max(ldiameter, rdiameter));
     }
 
-    
+    int diameter(){ return diameter(root);}
+
+    static int height(Node node){
+
+        if(node == null){
+            return 0;
+        }
+
+        return(1 + Math.max(height(node.left), height(node.right)));
+    }
+
+    public static void main (String args[]){
+        
+    }
 }
 
 class Node{
