@@ -14,7 +14,6 @@ public class Q5 {
 public static void main(String args[]) 
 { 
     // creating a binary tree and entering the nodes 
-    BinaryTree tree = new BinaryTree(); 
     tree.root = new Node(1); 
     tree.root.left = new Node(2); 
     tree.root.right = new Node(3); 
