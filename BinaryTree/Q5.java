@@ -22,7 +22,75 @@ public static void main(String args[])
 
     // Function Call 
     System.out.println( 
-        "The diameter of given binary tree is : "
+        "The diameter of given binary tree is : "    System.out.println( 
+            "The diameter of given binary tree is : "    System.out.println( 
+                "The diameter of given binary tree is : "    System.out.println( 
+                    "The diameter of given binary tree is : "    System.out.println( 
+                        "The diameter of given binary tree is : "    System.out.println( 
+                            "The diameter of given binary tree is : "    System.out.println( 
+                                "The diameter of given binary tree is : "    System.out.println( 
+                                    "The diameter of given binary tree is : "    System.out.println( 
+                                        "The diameter of given binary tree is : "    System.out.println( 
+                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                        "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                            "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                                "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                                    "The diameter of given binary tree is : "    System.out.println( 
+                                                                                                                                                                                                                                                                                        "The diameter of given binary tree is : "
         + tree.diameter()); 
 } 
 }
