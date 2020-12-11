@@ -39,7 +39,13 @@ public class Q6 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        
+        Node root = null;
+        while(t-- > 0){
+            int data = sc.nextInt();
+            root = insert(root, data);
+        }
+        sc.close();
+        preOrder(root);
     }
 
 }
