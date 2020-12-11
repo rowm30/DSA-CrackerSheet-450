@@ -20,7 +20,28 @@ public class Q6 {
         preOrder(root.right);
     }
 
-    
+    public static Node insert(Node root,int data){
+        if(root == null){
+            return new Node(data);
+        }else{
+            Node cur;
+            if(data <= root.data){
+                cur = insert(root.data);
+                root.left = cur;
+            }else{
+                cur = insert(root.right, data);
+                root.right = cur;
+            }
+            return root;
+        }
+    }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+    }
+
 }
 
 class Node{
