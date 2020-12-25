@@ -7,13 +7,15 @@ public class Q1 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
+        char[] s = input.toCharArray();
+        reverseString(s);
     }
 
-    public void reverseString(char[] s){
-
+    public static void reverseString(char[] s){
+        helper(s, 0, s.length);
     }
 
-    public void helper(char[] s, int left, int right){
+    public static void helper(char[] s, int left, int right){
         if (left>= right) {
             return;
         }
