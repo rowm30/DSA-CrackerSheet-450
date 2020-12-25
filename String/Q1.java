@@ -13,6 +13,11 @@ public class Q1 {
 
     }
 
-    
+    public void helper(char s, int left, int right){
+        if (left>= right) {
+            return;
+        }
+        
+    }
 
 }
