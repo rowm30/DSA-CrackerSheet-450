@@ -9,10 +9,11 @@ public class Q1 {
         String input = sc.next();
         char[] s = input.toCharArray();
         reverseString(s);
+        System.out.print(s);
     }
 
     public static void reverseString(char[] s){
-        helper(s, 0, s.length);
+        helper(s, 0, s.length-1);
     }
 
     public static void helper(char[] s, int left, int right){
