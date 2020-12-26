@@ -1,60 +1,40 @@
-import java.util.*;
-import java.io.*;
+// Java implementation of the approach 
+public class GFG { 
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
+	// Function that returns true if 
+	// str is a palindrome 
+	static boolean isPalindrome(String str) 
+	{ 
 
-class Solution {
+		// Pointers pointing to the beginning 
+		// and the end of the string 
+		int i = 0, j = str.length() - 1; 
 
-/* you only have to complete the function given below.  
-Node is defined as  
+		// While there are characters toc compare 
+		while (i < j) { 
 
-class Node {
-    int data;
-    Node left;
-    Node right;
-}
+			// If there is a mismatch 
+			if (str.charAt(i) != str.charAt(j)) 
+				return false; 
 
-*/
+			// Increment first pointer and 
+			// decrement the other 
+			i++; 
+			j--; 
+		} 
 
-    public static void preOrder(Node root) {
+		// Given string is a palindrome 
+		return true; 
+	} 
 
-    }
+	// Driver code 
+	public static void main(String[] args) 
+	{ 
+		String str = "geeks"; 
 
-	public static Node insert(Node root, int data) {
-        if(root == null) {
-            return new Node(data);
-        } else {
-            Node cur;
-            if(data <= root.data) {
-                cur = insert(root.left, data);
-                root.left = cur;
-            } else {
-                cur = insert(root.right, data);
-                root.right = cur;
-            }
-            return root;
-        }
-    }
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int t = scan.nextInt();
-        Node root = null;
-        while(t-- > 0) {
-            int data = scan.nextInt();
-            root = insert(root, data);
-        }
-        scan.close();
-        preOrder(root);
-    }	
-}
+		if (isPalindrome(str)) 
+			System.out.print("Yes"); 
+		else
+			System.out.print("No"); 
+	} 
+} 
