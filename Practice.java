@@ -1,40 +1,39 @@
-// Java implementation of the approach 
+// Java program to count all 
+// duplicates from string using 
+// hashing 
+
 public class GFG { 
+	static final int NO_OF_CHARS = 256; 
 
-	// Function that returns true if 
-	// str is a palindrome 
-	static boolean isPalindrome(String str) 
+	/* Fills count array with 
+	frequency of characters */
+	static void fillCharCounts(String str, 
+								int[] count) 
 	{ 
-
-		// Pointers pointing to the beginning 
-		// and the end of the string 
-		int i = 0, j = str.length() - 1; 
-
-		// While there are characters toc compare 
-		while (i < j) { 
-
-			// If there is a mismatch 
-			if (str.charAt(i) != str.charAt(j)) 
-				return false; 
-
-			// Increment first pointer and 
-			// decrement the other 
-			i++; 
-			j--; 
-		} 
-
-		// Given string is a palindrome 
-		return true; 
+		for (int i = 0; i < str.length(); i++) 
+			count[str.charAt(i)]++; 
 	} 
 
-	// Driver code 
+	/* Print duplicates present 
+	in the passed string */
+	static void printDups(String str) 
+	{ 
+		// Create an array of size 
+		// 256 and fill count of 
+		// every character in it 
+		int count[] = new int[NO_OF_CHARS]; 
+		fillCharCounts(str, count); 
+
+		for (int i = 0; i < NO_OF_CHARS; i++) 
+			if (count[i] > 1) 
+				System.out.println((char)(i) + 
+						", count = " + count[i]); 
+	} 
+
+	// Driver Method 
 	public static void main(String[] args) 
 	{ 
-		String str = "geeks"; 
-
-		if (isPalindrome(str)) 
-			System.out.print("Yes"); 
-		else
-			System.out.print("No"); 
+		String str = "test string"; 
+		printDups(str); 
 	} 
-} 
+}
