@@ -16,7 +16,7 @@ public class Q1 {
     }
     
     // Method 1
-    public String getname(){
+    public String getName(){
         return name;
     }
 
@@ -35,4 +35,13 @@ public class Q1 {
         return color;
     }
 
+    @Override
+    public String toString(){
+        return("Hi my name is " + this.getName() + "\n My breed,age and color are " + this.getBreed() + "," + this.getAge() + this.getColor());
+    }
+
+    public static void main(String[] args){
+        Q1 tuffy = new Q1("Tuffy", "papillion", 5, "White");
+        System.out.println(tuffy.toString());
+    }
 }
