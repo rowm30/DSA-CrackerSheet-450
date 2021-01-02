@@ -15,4 +15,24 @@ public class Q1 {
         this.color = color;
     }
     
+    // Method 1
+    public String getname(){
+        return name;
+    }
+
+    // Method 2
+    public String getBreed(){
+        return breed;
+    }
+
+    // Method 3
+    public int getAge(){
+        return age;
+    }
+
+    // Method 4
+    public String getColor(){
+        return color;
+    }
+
 }
