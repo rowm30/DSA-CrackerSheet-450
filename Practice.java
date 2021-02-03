@@ -1,59 +1,39 @@
-// Class Declaration
+// Java program to count all 
+// duplicates from string using 
+// hashing 
 
-public class Dog
-{
-	// Instance Variables
-	String name;
-	String breed;
-	int age;
-	String color;
+public class GFG { 
+	static final int NO_OF_CHARS = 256; 
 
-	// Constructor Declaration of Class
-	public Dog(String name, String breed,
-				int age, String color)
-	{
-		this.name = name;
-		this.breed = breed;
-		this.age = age;
-		this.color = color;
-	}
+	/* Fills count array with 
+	frequency of characters */
+	static void fillCharCounts(String str, 
+								int[] count) 
+	{ 
+		for (int i = 0; i < str.length(); i++) 
+			count[str.charAt(i)]++; 
+	} 
 
-	// method 1
-	public String getName()
-	{
-		return name;
-	}
+	/* Print duplicates present 
+	in the passed string */
+	static void printDups(String str) 
+	{ 
+		// Create an array of size 
+		// 256 and fill count of 
+		// every character in it 
+		int count[] = new int[NO_OF_CHARS]; 
+		fillCharCounts(str, count); 
 
-	// method 2
-	public String getBreed()
-	{
-		return breed;
-	}
+		for (int i = 0; i < NO_OF_CHARS; i++) 
+			if (count[i] > 1) 
+				System.out.println((char)(i) + 
+						", count = " + count[i]); 
+	} 
 
-	// method 3
-	public int getAge()
-	{
-		return age;
-	}
-
-	// method 4
-	public String getColor()
-	{
-		return color;
-	}
-
-	@Override
-	public String toString()
-	{
-		return("Hi my name is "+ this.getName()+
-			".\nMy breed,age and color are " +
-			this.getBreed()+"," + this.getAge()+
-			","+ this.getColor());
-	}
-
-	public static void main(String[] args)
-	{
-		Dog tuffy = new Dog("tuffy","papillon", 5, "white");
-		System.out.println(tuffy.toString());
-	}
+	// Driver Method 
+	public static void main(String[] args) 
+	{ 
+		String str = "test string"; 
+		printDups(str); 
+	} 
 }
