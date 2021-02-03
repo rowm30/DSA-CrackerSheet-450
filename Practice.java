@@ -2,7 +2,7 @@
 // duplicates from string using 
 // hashing 
 
-public class GFG { 
+public class Practice { 
 	static final int NO_OF_CHARS = 256; 
 
 	/* Fills count array with 
