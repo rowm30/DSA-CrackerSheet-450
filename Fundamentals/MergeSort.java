@@ -26,6 +26,31 @@ public class MergeSort{
 
         int i = 0, j = 0;
 
-        
+        // Initial index of merged sub array
+        int k = l;
+        while(i < n1 && j < n2){
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
+                i++;
+            } else {
+                arr[k] = R[j];
+                j++;
+            }
+            k++;
+        }
+
+        // copy remaining elements 
+
+        while(i < n1){
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
     }
 }
