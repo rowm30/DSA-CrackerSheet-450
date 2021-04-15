@@ -1,34 +1,40 @@
-class CoinChanger2 { 
+// Java program to put all negative
+// numbers before positive numbers
+import java.io.*;
 
-    static int findWays(int[] coins, int sum) {
-      // Declaring a 2-D array
-      // for storing solutions to subproblems:
-    	int size = coins.length;
-    	int[][] arr = new int[size + 1][sum + 1];
-    	
-      // Initializing first column of array to 1
-      // because a sum of 0 can be made
-      // in one possible way: {0}
-    	for(int i = 0; i < size + 1; i++)
-    		arr[i][0] = 1;
-    	
-      // Applying the recursive solution:
-    	for(int i = 1; i < size + 1; i++)
-    		for(int j = 0; j < sum + 1; j++)
-    			if(coins[i - 1] > j)  // Cannot pick the highest coin:
-    				arr[i][j] = arr[i - 1][j];
-    			else  // Pick the highest coin:
-    				arr[i][j] = arr[i][j - coins[i - 1]] + arr[i - 1][j];
-    	
-    	return arr[size][sum];
-    }
-  
-    public static void main(String args[]) 
-    { 
-        int coins[] = {1, 2};  // Declaring array of coins
-        int sum = 5;  // The sum to be made
+class GFG {
 
-        System.out.println("The possible ways in which " + sum
-        		+ " can be made is " + findWays(coins, sum));
-    } 
+	static void rearrange(int arr[], int n)
+	{
+		int j = 0, temp;
+		for (int i = 0; i < n; i++) {
+			if (arr[i] < 0) {
+				if (i != j) {
+					temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+				j++;
+			}
+		} 
+	}
+
+	// A utility function to print an array
+	static void printArray(int arr[], int n)
+	{
+		for (int i = 0; i < n; i++)
+			System.out.print(arr[i] + " ");
+	}
+
+	// Driver code
+	public static void main(String args[])
+	{
+		int arr[] = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+		int n = arr.length;
+
+		rearrange(arr, n);
+		printArray(arr, n);
+	}
 }
+
+// This code is contributed by Nikita Tiwari.
