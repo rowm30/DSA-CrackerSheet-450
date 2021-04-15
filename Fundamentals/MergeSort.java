@@ -53,4 +53,40 @@ public class MergeSort{
             k++;
         }
     }
+
+    public static void sort(int arr[], int l, int r){
+        if (l < r) {
+            // Find the middle point
+            int m = l + (r-l)/2;
+
+            // Sort first and second halves
+            sort(arr, l, m);
+            sort(arr, m+1, r);
+
+            // Merge the sorted halves
+            merge(arr,l , m,  r);
+        }
+    }
+
+    public static void printArray(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        sort(arr, 0, n-1);
+
+        printArray(arr);
+
+        sc.close();
+    }
 }
