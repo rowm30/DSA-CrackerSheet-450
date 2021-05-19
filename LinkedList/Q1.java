@@ -22,6 +22,15 @@ class Q1{
         head = new_node;
     }
 
+    public static void printList(){
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->"+" ");
+            temp = temp.next;
+        }
+        System.out.println("");
+    }
+
     // Reverse the List
     Node reverse(Node node){
         Node prev = null;
@@ -38,14 +47,7 @@ class Q1{
         return node;
     }
 
-    // Print content of double linked list
-    public static void printList(Node node){
-        while(node != null){
-            System.out.print(node.data + " ");
-            node = node.next;
-        }
-    }
-
+  
     public static void main(String[] args){
         Q1 list = new Q1();
         list.head = new Node(42);
