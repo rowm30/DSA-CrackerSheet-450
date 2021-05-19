@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.Scanner;
+
 class Q1{
 
     static Node head;
@@ -50,7 +52,20 @@ class Q1{
   
     public static void main(String[] args){
         Q1 list = new Q1();
+        System.out.print("Enter the size of LinkedList: ");
         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println("");
+        System.out.println("");
+
+        System.out.print("Enter the numbers: ");
+
+        for (int i = 0; i < n; i++) {
+            int data = sc.nextInt();
+            list.push(data);
+        }
+
 
         System.out.println("Given Linked list:");
         printList();
