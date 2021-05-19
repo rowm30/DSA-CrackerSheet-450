@@ -50,18 +50,14 @@ class Q1{
   
     public static void main(String[] args){
         Q1 list = new Q1();
-        list.head = new Node(42);
-        list.head.next = new Node(12);
-        list.head.next.next = new Node(21);
-        list.head.next.next.next = new Node(66);
-        list.head.next.next.next.next = new Node(90);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Given Linked list:");
-        list.printList(head);
+        printList();
         head = list.reverse(head);
         System.out.println("");
         System.out.println("Reverse linked list");
-        list.printList(head);
+        printList();
     }
 
 
