@@ -24,5 +24,10 @@ public class Q1 {
         root = null;
     }
 
-    
+    Node insertRec(Node root,int key){
+        if (root == null) {
+            root = new Node(key);
+            return root;
+        }
+    }
 }
