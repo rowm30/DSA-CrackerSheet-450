@@ -13,6 +13,5 @@ class Practice{
         }
         System.out.println(arr.length);
         System.out.println(arr[m-1].length);
-        System.out.println(arr[n].length);
     }
 }
