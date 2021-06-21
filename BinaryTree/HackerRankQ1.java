@@ -17,6 +17,15 @@ class Node {
 public class HackerRankQ1 {
     
 
+    public static void preOrder(Node root){
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
     public static Node insert(Node root, int data){
         if(root == null){
             return new Node(data);
