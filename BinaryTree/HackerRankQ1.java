@@ -53,4 +53,6 @@ public class HackerRankQ1 {
         sc.close();
     }
     
+     DFG
+     
 }
