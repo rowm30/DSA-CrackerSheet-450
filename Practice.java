@@ -97,12 +97,7 @@ public class Q2 {
 
         if (wt[n - 1] > w){
             return KS(w, wt , val, n-1);
-        }else{
-            return max((val[n - 1] + KS(w - wt[n - 1], wt, val, n - 1)), (KS(w, wt, val, n - 1)));
-        }
-    }
 
-    // Driver Code
     public static void main(String[] args){
         int val[] = new int[] {60, 100, 120};
         int wt[] = new int[] {10, 20, 30};
