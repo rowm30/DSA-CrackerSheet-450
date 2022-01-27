@@ -1,209 +1,102 @@
-// Java program to find height of tree
+package DP;
 
-class Q3{
-    NodeXL root;
+// 0-1 KnapSack
 
-    int maxDepth(NodeXL node){
-        if (node == null) {
+public class Q2 {
+    
+    static int max(int a, int b){
+        return (a > b) ? a : b;
+    }
+
+    static int KS(int w, int wt[], int val[], int n){
+        // Base Condition
+
+        if(n == 0 || w == 0){
             return 0;
-        } else {
-            // Compute the depth of each sub tree
-            int lDepth = maxDepth(node.left);
-            int rDepth = maxDepth(node.right);
+        }
 
-            // Use the larger one 
-            if (lDepth>rDepth) {
-                return(lDepth+1);
-            } else {
-                return(rDepth+1);
-            }
+        if (wt[n - 1] > w){
+            return KS(w, wt , val, n-1);
+        }else{
+            return max((val[n - 1] + KS(w - wt[n - 1], wt, val, n - 1)), (KS(w, wt, val, n - 1)));
         }
     }
 
+    // Driver Code
     public static void main(String[] args){
-        Q3 tree = new Q3();
-
-        tree.root = new NodeXL(1);
-        tree.root.left = new NodeXL(2);
-        tree.root.right = new NodeXL(3);
-        tree.root.left.left = new NodeXL(4);
-        tree.root.left.right = new NodeXL(5);
-        tree.root.left.right.left = new NodeXL(5);
-        tree.root.left.right.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.right.left = new NodeXL(5);
-        tree.root.right.right = new NodeXL(5);
-        tree.root.right.right.left = new NodeXL(5);
-        tree.root.right.right.left.right = new NodeXL(5);
-        
-        System.out.println("Height is : " + tree.maxDepth(tree.root));
+        int val[] = new int[] {60, 100, 120};
+        int wt[] = new int[] {10, 20, 30};
+        int w = 50;
+        int n = val.length;
+        System.out.println(KS(w, wt, val, n));
     }
+
 }
-// Java program to find height of tree
+package DP;
 
-class Q3{
-    NodeXL root;
+// 0-1 KnapSack
 
-    int maxDepth(NodeXL node){
-        if (node == null) {
+public class Q2 {
+    
+    static int max(int a, int b){
+        return (a > b) ? a : b;
+    }
+
+    static int KS(int w, int wt[], int val[], int n){
+        // Base Condition
+
+        if(n == 0 || w == 0){
             return 0;
-        } else {
-            // Compute the depth of each sub tree
-            int lDepth = maxDepth(node.left);
-            int rDepth = maxDepth(node.right);
+        }
 
-            // Use the larger one 
-            if (lDepth>rDepth) {
-                return(lDepth+1);
-            } else {
-                return(rDepth+1);
-            }
+        if (wt[n - 1] > w){
+            return KS(w, wt , val, n-1);
+        }else{
+            return max((val[n - 1] + KS(w - wt[n - 1], wt, val, n - 1)), (KS(w, wt, val, n - 1)));
         }
     }
 
+    // Driver Code
     public static void main(String[] args){
-        Q3 tree = new Q3();
-
-        tree.root = new NodeXL(1);
-        tree.root.left = new NodeXL(2);
-        tree.root.right = new NodeXL(3);
-        tree.root.left.left = new NodeXL(4);
-        tree.root.left.right = new NodeXL(5);
-        tree.root.left.right.left = new NodeXL(5);
-        tree.root.left.right.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.right.left = new NodeXL(5);
-        tree.root.right.right = new NodeXL(5);
-        tree.root.right.right.left = new NodeXL(5);
-        tree.root.right.right.left.right = new NodeXL(5);
-        
-        System.out.println("Height is : " + tree.maxDepth(tree.root));
+        int val[] = new int[] {60, 100, 120};
+        int wt[] = new int[] {10, 20, 30};
+        int w = 50;
+        int n = val.length;
+        System.out.println(KS(w, wt, val, n));
     }
+
 }
+package DP;
 
-// Java program to find height of tree
+// 0-1 KnapSack
 
-class Q3{
-    NodeXL root;
+public class Q2 {
+    
+    static int max(int a, int b){
+        return (a > b) ? a : b;
+    }
 
-    int maxDepth(NodeXL node){
-        if (node == null) {
+    static int KS(int w, int wt[], int val[], int n){
+        // Base Condition
+
+        if(n == 0 || w == 0){
             return 0;
-        } else {
-            // Compute the depth of each sub tree
-            int lDepth = maxDepth(node.left);
-            int rDepth = maxDepth(node.right);
+        }
 
-            // Use the larger one 
-            if (lDepth>rDepth) {
-                return(lDepth+1);
-            } else {
-                return(rDepth+1);
-            }
+        if (wt[n - 1] > w){
+            return KS(w, wt , val, n-1);
+        }else{
+            return max((val[n - 1] + KS(w - wt[n - 1], wt, val, n - 1)), (KS(w, wt, val, n - 1)));
         }
     }
 
+    // Driver Code
     public static void main(String[] args){
-        Q3 tree = new Q3();
-
-        tree.root = new NodeXL(1);
-        tree.root.left = new NodeXL(2);
-        tree.root.right = new NodeXL(3);
-        tree.root.left.left = new NodeXL(4);
-        tree.root.left.right = new NodeXL(5);
-        tree.root.left.right.left = new NodeXL(5);
-        tree.root.left.right.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.right.left = new NodeXL(5);
-        tree.root.right.right = new NodeXL(5);
-        tree.root.right.right.left = new NodeXL(5);
-        tree.root.right.right.left.right = new NodeXL(5);
-        
-        System.out.println("Height is : " + tree.maxDepth(tree.root));
-    }
-}
-
-
-// Java program to find height of tree
-
-class Q3{
-    NodeXL root;
-
-    int maxDepth(NodeXL node){
-        if (node == null) {
-            return 0;
-        } else {
-            // Compute the depth of each sub tree
-            int lDepth = maxDepth(node.left);
-            int rDepth = maxDepth(node.right);
-
-            // Use the larger one 
-            if (lDepth>rDepth) {
-                return(lDepth+1);
-            } else {
-                return(rDepth+1);
-            }
-        }
+        int val[] = new int[] {60, 100, 120};
+        int wt[] = new int[] {10, 20, 30};
+        int w = 50;
+        int n = val.length;
+        System.out.println(KS(w, wt, val, n));
     }
 
-    public static void main(String[] args){
-        Q3 tree = new Q3();
-
-        tree.root = new NodeXL(1);
-        tree.root.left = new NodeXL(2);
-        tree.root.right = new NodeXL(3);
-        tree.root.left.left = new NodeXL(4);
-        tree.root.left.right = new NodeXL(5);
-        tree.root.left.right.left = new NodeXL(5);
-        tree.root.left.right.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.left.left.right = new NodeXL(5);
-        tree.root.right.left = new NodeXL(5);
-        tree.root.right.right = new NodeXL(5);
-        tree.root.right.right.left = new NodeXL(5);
-        tree.root.right.right.left.right = new NodeXL(5);
-        
-        System.out.println("Height is : " + tree.maxDepth(tree.root));
-    }
-}
-
-class NodeXL{
-    int data;
-    NodeXL left,right;
-
-    NodeXL(int item){
-        data = item;
-        left = right = null;
-    }
-}
-class NodeXL{
-    int data;
-    NodeXL left,right;
-
-    NodeXL(int item){
-        data = item;
-        left = right = null;
-    }
-}
-class NodeXL{
-    int data;
-    NodeXL left,right;
-
-    NodeXL(int item){
-        data = item;
-        left = right = null;
-    }
-}
-
-class NodeXL{
-    int data;
-    NodeXL left,right;
-
-    NodeXL(int item){
-        data = item;
-        left = right = null;
-    }
 }
